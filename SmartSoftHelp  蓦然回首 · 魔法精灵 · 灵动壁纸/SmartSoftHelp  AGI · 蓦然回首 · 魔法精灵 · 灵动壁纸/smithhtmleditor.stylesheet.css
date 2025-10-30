@@ -1,0 +1,155 @@
+﻿/* 基础样式补充 */
+body {
+    font-family: SimSun, Tahoma, Verdana, sans-serif; /* 增加备选无衬线字体 */
+    font-size: 10pt;
+    line-height: 22px;
+    letter-spacing: 3px;
+    word-wrap: break-word;
+    text-overflow: ellipsis;
+    outline: none;
+    background-color: #CCE8CF;
+    margin: 3px;
+    padding: 0; /* 重置默认内边距 */
+    color: #333; /* 基础文本颜色，提升可读性 */
+}
+
+/* 块级元素统一处理 */
+p, ul, ol, dl, blockquote, pre {
+    line-height: 22px;
+    padding: 3pt;
+    margin: 0 0 12px 0; /* 底部统一留白，避免内容粘连 */
+    letter-spacing: 3px;
+    outline: none;
+}
+
+/* 列表样式优化 */
+ul, ol {
+    padding-left: 24px; /* 统一缩进，增强层级感 */
+}
+
+    ul li, ol li {
+        margin-bottom: 6px; /* 列表项间距 */
+    }
+
+/* 链接样式整合与交互优化 */
+a {
+    font-size: 9pt;
+    color: #006699;
+    text-decoration: none;
+    outline: none;
+    transition: color 0.2s ease; /* 平滑颜色过渡 */
+}
+
+    a:active,
+    a:link {
+        color: #006699;
+    }
+
+    a:focus {
+        color: #000;
+        outline: 1px dotted #666; /* 焦点状态可见性优化 */
+    }
+
+    a:hover {
+        color: #ff4500;
+    }
+
+/* 图片响应式处理 */
+img {
+    border-radius: 3px;
+    outline: none;
+    max-width: 100%; /* 避免图片溢出容器 */
+    height: auto; /* 保持宽高比 */
+    display: block; /* 消除底部间隙 */
+    margin: 6px 0; /* 上下留白 */
+}
+
+/* 表格样式补充 */
+table {
+    width: 100%;
+    border-collapse: collapse; /* 合并边框 */
+    margin: 12px 0;
+}
+
+th, td {
+    padding: 8px 10px;
+    border: 1px solid #bdd8c0; /* 边框颜色与背景协调 */
+    text-align: left;
+}
+
+th {
+    background-color: #b9ddc1; /* 表头背景加深 */
+    font-weight: bold;
+}
+
+/* 表单元素规范 */
+input, button, select, textarea {
+    font-family: inherit; /* 继承字体，保持一致性 */
+    font-size: 9pt;
+    padding: 5px 8px;
+    margin: 3px 0;
+    border: 1px solid #99ccaa;
+    border-radius: 3px;
+    background-color: #fff;
+}
+
+    input:focus, textarea:focus, select:focus {
+        outline: 2px solid #7aad81; /* 焦点高亮 */
+        border-color: #7aad81;
+    }
+
+button {
+    background-color: #b9ddc1;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+    button:hover {
+        background-color: #a8d0b0;
+    }
+
+/* 标题样式补充 */
+h1, h2, h3, h4, h5, h6 {
+    margin: 15px 0 10px 0;
+    letter-spacing: 2px; /* 标题字间距略小，突出层级 */
+    color: #2d5e33; /* 标题颜色加深 */
+}
+
+h1 {
+    font-size: 16pt;
+}
+
+h2 {
+    font-size: 14pt;
+}
+
+h3 {
+    font-size: 12pt;
+}
+
+/* 引用和代码块 */
+blockquote {
+    border-left: 3px solid #8dc997;
+    padding-left: 12px;
+    color: #4a6e50;
+    background-color: rgba(255,255,255,0.5);
+}
+
+pre {
+    background-color: #f0f7f1;
+    border-radius: 3px;
+    overflow-x: auto; /* 横向滚动避免换行 */
+    padding: 10px;
+}
+
+/* 响应式调整（小屏幕适配） */
+@media (max-width: 768px) {
+    body {
+        margin: 5px;
+        letter-spacing: 2px; /* 小屏幕字间距略减 */
+    }
+
+    ul, ol {
+        padding-left: 18px;
+    }
+}
